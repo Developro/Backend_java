@@ -1,4 +1,4 @@
-package Backend_java.Backend_java;
+package ru.clucky.Backend_java;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
