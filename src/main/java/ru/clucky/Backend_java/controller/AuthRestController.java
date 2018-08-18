@@ -10,10 +10,10 @@ public class AuthRestController {
 
     @PostMapping
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Auth login(@RequestParam String log, @RequestParam String pass){
+    public Auth login(@RequestParam String login, @RequestParam String password){
 
 
-        return new Auth(log, pass);
+        return new Auth(login, password);
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -27,7 +27,7 @@ public class AuthRestController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Auth register(){
+    public Auth register(@RequestParam String login, @RequestParam String password, @RequestParam String email){
         return new Auth("testRegister", "testREGISTER");
     }
 }
